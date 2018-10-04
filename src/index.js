@@ -8,7 +8,7 @@ module.exports = function solveSudoku(matrix) {
     initSolved(matrix);
     solve();
 
-	
+
     function initSolved(matrix) {
       steps = 0;
       let suggest = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -56,9 +56,9 @@ module.exports = function solveSudoku(matrix) {
 
             continue;
           }
-		  
+
           changed += solveSingle(i, j);
-		  
+
           changed += solveHiddenSingle(i, j);
         }
       }
@@ -127,7 +127,7 @@ module.exports = function solveSudoku(matrix) {
       return content;
     };
 
-	
+
     function sectContent(i, j) {
       let content = [];
       let offset = sectOffset(i, j);
@@ -153,7 +153,7 @@ module.exports = function solveSudoku(matrix) {
       return less_suggest;
     };
 
-	
+
     function lessColSuggest(i, j) {
       let less_suggest = solved[i][j][2];
       for (let k = 0; k < 9; k++) {
@@ -311,7 +311,7 @@ module.exports = function solveSudoku(matrix) {
     this.solved = function () {
       return solved;
     };
-	
+
 
   };
 
